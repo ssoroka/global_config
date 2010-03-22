@@ -1,0 +1,44 @@
+GlobalConfig
+============
+
+Simple ActiveRecord-backed global configuration model.
+
+use GlobalConfig.setting_name to get and set database values.
+
+Supports any type of ruby object that can be safely converted to yaml and back.
+
+Supports caching the values so the app doesn't need to continuously hit the db.  For this to work properly in production across multiple servers, you'll want to use something like Memcached so the cache is shared across servers.
+
+Use migrations or generate an admin interface to update config settings in production.
+
+Install
+=======
+
+Install the plugin
+
+    script/install plugin http://github.com/ssoroka/global_config.git
+
+install the migration
+
+    script/generate global_config
+
+Tests
+=====
+
+Tests use rspec, and last I checked, pass. :)
+rspec specs in spec/global_config_spec.rb
+
+    rake spec
+
+or
+
+    spec spec
+
+Example
+=======
+
+GlobalConfig.admin_email = 'john@mydomain.com'
+GlobalConfig.admin_email # now set to 'john@mydomain.com'
+
+
+Copyright (c) 2010 Steven Soroka, released under the MIT license
