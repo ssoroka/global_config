@@ -40,5 +40,11 @@ Example
 GlobalConfig.admin_email = 'john@mydomain.com'
 GlobalConfig.admin_email # now set to 'john@mydomain.com'
 
+Author
+======
+
+Steven Soroka
+@ssoroka - twitter
+http://blog.stevensoroka.ca
 
 Copyright (c) 2010 Steven Soroka, released under the MIT license
